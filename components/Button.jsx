@@ -10,8 +10,6 @@ export default class Button extends Component {
   onClick() {
     const { clickEvent } = this.props;
 
-    console.log('typeof clickEvent: ', typeof clickEvent);
-
     switch(typeof clickEvent) {
       case 'string':
         window.open(clickEvent);

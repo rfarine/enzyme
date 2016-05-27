@@ -1,13 +1,13 @@
 "use strict";
 
 import React from 'react';
+import Button from '../components/Button';
 import { mount, shallow } from 'enzyme';
 import { default as chai, expect } from 'chai';
 import sinonChai from 'sinon-chai';
 import sinon from 'sinon';
-chai.use(sinonChai);
 
-import Button from '../components/Button';
+chai.use(sinonChai);
 
 describe('<Button/>', () => {
   let wrapper;
@@ -29,8 +29,6 @@ describe('<Button/>', () => {
       text: 'Test clickEvent()',
     };
     wrapper = shallow(<Button {...props} />);
-
-    console.log('onClick', wrapper.props().onClick);
 
     wrapper.find('a').simulate('click');
 
